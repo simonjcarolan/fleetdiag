@@ -1,0 +1,51 @@
+{
+  "$comment": "CONTRAT FleetPortal v1 — toute modification exige l'accord de l'équipe FleetPortal (voir FD-120). FleetPortal rejette tout champ non déclaré.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "vehicle_id", "generated_at", "entries", "summary"],
+  "properties": {
+    "schema_version": {"type": "string", "enum": ["1.2"]},
+    "vehicle_id": {"type": "string"},
+    "generated_at": {"type": "string"},
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["code", "ecu", "system", "description", "severity", "status", "active", "occurrences", "last_seen"],
+        "properties": {
+          "code": {"type": "string"},
+          "ecu": {"type": "string"},
+          "system": {"type": "string", "enum": ["powertrain", "chassis", "body", "network"]},
+          "description": {"type": "string"},
+          "severity": {"type": "string", "enum": ["INFO", "MINOR", "MAJOR", "CRITICAL"]},
+          "status": {"type": "string"},
+          "active": {"type": "boolean"},
+          "occurrences": {"type": "integer"},
+          "last_seen": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total", "active", "critical", "by_severity"],
+      "properties": {
+        "total": {"type": "integer"},
+        "active": {"type": "integer"},
+        "critical": {"type": "integer"},
+        "by_severity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["INFO", "MINOR", "MAJOR", "CRITICAL"],
+          "properties": {
+            "INFO": {"type": "integer"},
+            "MINOR": {"type": "integer"},
+            "MAJOR": {"type": "integer"},
+            "CRITICAL": {"type": "integer"}
+          }
+        }
+      }
+    }
+  }
+}

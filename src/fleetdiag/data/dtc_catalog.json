@@ -1,0 +1,20 @@
+{
+  "catalog_version": "2026.09",
+  "codes": {
+    "P0128": {"description": "Thermostat : température de liquide de refroidissement sous le seuil", "severity": "INFO"},
+    "P0171": {"description": "Mélange trop pauvre, banc 1", "severity": "MINOR"},
+    "P0300": {"description": "Ratés d'allumage aléatoires / multiples cylindres", "severity": "MAJOR"},
+    "P0301": {"description": "Raté d'allumage cylindre 1", "severity": "MAJOR"},
+    "P0420": {"description": "Efficacité du catalyseur sous le seuil, banc 1", "severity": "MINOR"},
+    "P0505": {"description": "Régulation du ralenti", "severity": "INFO"},
+    "P0562": {"description": "Tension système basse", "severity": "MAJOR"},
+    "P0700": {"description": "Système de commande de transmission — défaut signalé", "severity": "MAJOR"},
+    "C0035": {"description": "Capteur de vitesse roue avant gauche", "severity": "CRITICAL"},
+    "C0040": {"description": "Capteur de vitesse roue avant droite", "severity": "CRITICAL"},
+    "B0001": {"description": "Commande de déploiement airbag frontal conducteur, étage 1", "severity": "CRITICAL"},
+    "B1000": {"description": "Défaut interne calculateur habitacle", "severity": "MINOR"},
+    "U0100": {"description": "Perte de communication avec le calculateur moteur", "severity": "MAJOR"},
+    "U0121": {"description": "Perte de communication avec le calculateur ABS", "severity": "CRITICAL"},
+    "U0155": {"description": "Perte de communication avec le combiné d'instruments", "severity": "MINOR"}
+  }
+}

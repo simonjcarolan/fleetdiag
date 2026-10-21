@@ -1,0 +1,3 @@
+# Dépendances d'exécution approuvées (revue architecture + sécurité).
+# Ajouter une ligne ici exige une validation humaine (voir CLAUDE.md).
+# Le code applicatif n'utilise actuellement que la bibliothèque standard.

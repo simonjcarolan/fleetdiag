@@ -1,0 +1,22 @@
+[project]
+name = "fleetdiag"
+version = "1.3.2"
+description = "API interne de consolidation des défauts de diagnostic véhicule (dépôt de formation)"
+requires-python = ">=3.9"
+# Bibliothèque standard uniquement. Toute dépendance d'exécution doit figurer
+# dans contracts/approved_dependencies.txt (validation humaine obligatoire).
+dependencies = []
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+src = ["src", "libs", "."]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["fleetdiag", "dtc_status", "tests", "consumers"]
+
+[tool.ruff.lint.per-file-ignores]
+"tools/**" = ["E501"]

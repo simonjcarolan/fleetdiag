@@ -1,0 +1,107 @@
+{
+  "$comment": "Contrat d'interface publique v1 (FleetPortal, outil atelier). Généré par scripts/public_api.py ; toute mise à jour = décision humaine (FD-120).",
+  "contract_version": "1",
+  "symbols": {
+    "fleetdiag.api.DiagnosticService.__init__": [
+      {
+        "name": "self",
+        "kind": "POSITIONAL_OR_KEYWORD",
+        "default": null
+      },
+      {
+        "name": "catalog",
+        "kind": "POSITIONAL_OR_KEYWORD",
+        "default": "None"
+      },
+      {
+        "name": "engine",
+        "kind": "POSITIONAL_OR_KEYWORD",
+        "default": "None"
+      },
+      {
+        "name": "clock",
+        "kind": "POSITIONAL_OR_KEYWORD",
+        "default": "<callable>"
+      }
+    ],
+    "fleetdiag.api.DiagnosticService.build_report": [
+      {
+        "name": "self",
+        "kind": "POSITIONAL_OR_KEYWORD",
+        "default": null
+      },
+      {
+        "name": "records",
+        "kind": "POSITIONAL_OR_KEYWORD",
+        "default": null
+      },
+      {
+        "name": "principal",
+        "kind": "KEYWORD_ONLY",
+        "default": "None"
+      },
+      {
+        "name": "vehicle_id",
+        "kind": "KEYWORD_ONLY",
+        "default": "''"
+      }
+    ],
+    "fleetdiag.api.Report.to_dict": [
+      {
+        "name": "self",
+        "kind": "POSITIONAL_OR_KEYWORD",
+        "default": null
+      }
+    ],
+    "fleetdiag.auth.authenticate": [
+      {
+        "name": "api_key",
+        "kind": "POSITIONAL_OR_KEYWORD",
+        "default": null
+      },
+      {
+        "name": "keyring",
+        "kind": "KEYWORD_ONLY",
+        "default": "None"
+      }
+    ],
+    "fleetdiag.auth.load_keyring_from_env": [
+      {
+        "name": "environ",
+        "kind": "POSITIONAL_OR_KEYWORD",
+        "default": "None"
+      }
+    ],
+    "fleetdiag.auth.Principal.fields": [
+      "client_id",
+      "scopes"
+    ],
+    "fleetdiag.auth.Principal.has_scope": [
+      {
+        "name": "self",
+        "kind": "POSITIONAL_OR_KEYWORD",
+        "default": null
+      },
+      {
+        "name": "scope",
+        "kind": "POSITIONAL_OR_KEYWORD",
+        "default": null
+      }
+    ],
+    "fleetdiag.auth.scopes": {
+      "SCOPE_ENGINEERING": "report:engineering",
+      "SCOPE_WORKSHOP": "report:workshop",
+      "SCOPE_FLEET": "report:fleet"
+    },
+    "fleetdiag.auth.__all__": [
+      "AuthenticationError",
+      "KNOWN_SCOPES",
+      "Principal",
+      "SCOPE_ENGINEERING",
+      "SCOPE_FLEET",
+      "SCOPE_WORKSHOP",
+      "authenticate",
+      "load_keyring_from_env"
+    ]
+  }
+}

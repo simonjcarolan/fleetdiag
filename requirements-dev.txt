@@ -1,0 +1,2 @@
+# Outils de développement facultatifs (le hook de formatage s'en passe s'ils sont absents)
+ruff>=0.6
